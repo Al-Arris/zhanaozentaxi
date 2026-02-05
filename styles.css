@@ -9,6 +9,8 @@
   --primary-2: #6d9dff;
 }
 
+
+
 * { box-sizing: border-box; }
 
 body {
@@ -127,11 +129,12 @@ h1 span {
 }
 .footer-inner { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
 
-@media (max-width: 980px) {
+@media (max-width: 1024px) {
   .map-layout,
   .app-card,
   .cards-3 { grid-template-columns: 1fr; }
 
   #taxiMap { height: 420px; }
   .nav ul { display: none; }
+
 }
