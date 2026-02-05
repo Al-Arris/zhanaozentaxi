@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZhanaozenTaxi — Премиум taxi experience</title>
+  <meta name="description" content="ZhanaozenTaxi — Жаңаөзендегі заманауи такси сервисі: карта, маршрут, live taxi tracking және App Store жүктеу." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-glow"></div>
+  <header class="header glass">
+    <div class="container nav">
+      <a class="logo" href="#">Zhanaozen<span>Taxi</span></a>
+      <nav>
+        <ul>
+          <li><a href="#map">Smart карта</a></li>
+          <li><a href="#app">Қосымша</a></li>
+          <li><a href="#services">Артықшылық</a></li>
+          <li><a href="#contacts">Байланыс</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-card glass">
+        <p class="badge">🚀 Startup-ready taxi platform</p>
+        <h1>Сіздің жеке жүргізуішіңіздей <span>заманауи такси платформасы</span></h1>
+        <p class="subtitle">Клиент бірден әсер беретін интерфейс.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#map">Маршрут құру</a>
+          <a class="btn ghost" href="tel:+77000991310">+7 (700) 099-13-10</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="map" class="section container">
+      <div class="section-head">
+        <h2>Smart маршрут картасы</h2>
+        <p>Алу және бару адресін картадан белгілеңіз — жүйе маршрутты автоматты сызады.</p>
+      </div>
+
+      <div class="map-layout">
+        <aside class="map-panel glass">
+          <h3>Маршрут басқару</h3>
+          <div class="mode-buttons">
+            <button id="setPickupBtn" class="btn primary full" type="button">1) Алу адресін белгілеу</button>
+            <button id="setDropoffBtn" class="btn dark full" type="button">2) Баратын жерін белгілеу</button>
+          </div>
+          <p class="help">Картаға басқанда таңдалған режим бойынша маркер қойылады.</p>
+          <div class="route-info">
+            <p><strong>Алу:</strong> <span id="pickupText">Белгіленбеген</span></p>
+            <p><strong>Бару:</strong> <span id="dropoffText">Белгіленбеген</span></p>
+            <p><strong>Қашықтық:</strong> <span id="distanceText">—</span></p>
+            <p><strong>Уақыт:</strong> <span id="durationText">—</span></p>
+          </div>
+        </aside>
+
+        <div class="map-card glass">
+          <div id="taxiMap"></div>
+          <div class="legend">
+            <span>🟢 Алу нүктесі</span>
+            <span>🔴 Баратын жер</span>
+            <span>🚕 Live такси</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="app" class="section container">
+      <div class="app-card glass">
+        <div>
+          <h2>Қосымшаны жүктеу</h2>
+          <p>iPhone қолданушылары үшін ресми App Store батырмасы.</p>
+          <a href="https://apps.apple.com/" target="_blank" rel="noopener noreferrer" class="store-link" aria-label="Download on the App Store">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="store-badge" />
+          </a>
+        </div>
+        <ul>
+          <li>Реал-тайм жүргізуші позициясы</li>
+          <li>Маршрут бойынша ETA есептеу</li>
+          <li>Премиум onboarding тәжірибесі</li>
+        </ul>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer id="contacts" class="footer">
+    <div class="container footer-inner">
+      <p>📍 Жаңаөзен, Маңғыстау облысы</p>
+      <p>📞 +7 (700) 099-13-10</p>
+      <p>Сайтты жасаған: <strong>Арман Асқарұлы</strong></p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="script.js"></script>
+</body>
+</html>
